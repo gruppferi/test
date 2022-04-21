@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Generic test model",
+    "definitions": {
+      "awusome": {
+        "description": "A awsome",
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "x-tags": ["filter"]
+          },
+          "systemNr": {
+            "type": "string",
+            "x-tags": ["filter"]
+          },
+          "subSystemNr": {
+            "type": "string",
+            "x-tags": ["filter"]
+          },
+          "externalId": {
+            "type": "string",
+            "x-tags": ["filter"]
+          },
+          "location": {
+            "description": "location of this awsome",
+            "$ref": "../shared/geo_point.json"
+          },
+          "comment": {
+            "description": "the common field contain all un-modeled stuff",
+            "type": "string"
+          },
+          "protocol": {
+            "description": "protocol that is used to communicate with the awsome",
+            "type": "string",
+            "x-enum": ["http", "ftp", "ssh", "https"],
+            "x-tags": ["filter"]
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/awsomeNode"
+            },
+            "minItems": 1
+          },
+          "shortName": {
+            "type": "string",
+            "x-tags": ["filter"]
+          },
+          "myid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  }
