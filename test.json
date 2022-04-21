@@ -27,8 +27,8 @@
             "x-tags": ["filter"]
           },
           "location": {
-            "description": "location of this awsome",
-            "$ref": "../shared/geo_point.json"
+            "type": "string",
+            "format": "uuid"
           },
           "comment": {
             "description": "the common field contain all un-modeled stuff",
