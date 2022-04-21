@@ -40,13 +40,6 @@
             "x-enum": ["http", "ftp", "ssh", "https"],
             "x-tags": ["filter"]
           },
-          "nodes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/awsomeNode"
-            },
-            "minItems": 1
-          },
           "shortName": {
             "type": "string",
             "x-tags": ["filter"]
